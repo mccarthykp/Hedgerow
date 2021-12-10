@@ -1,0 +1,62 @@
+* {
+  font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+  height: 100vh;
+  background-color: rgb(140, 140, 140);
+}
+
+h1 {
+  color: black;
+  padding-top: 5rem;
+}
+
+a {
+  color: rgb(65, 65, 65);
+}
+
+a:hover {
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+}
+
+h2 a {
+  color: rgb(255, 255, 255);
+}
+
+h2 a:hover {
+  color: rgb(52, 52, 52);
+}
+
+p {
+  color:  rgb(48, 48, 48);
+}
+
+.amount {
+  color: rgb(0, 60, 0);
+}
+
+.rating-num {
+  color: red;
+}
+
+.btn {
+  color: black;
+}
+
+.btn:hover {
+  color: rgb(255, 255, 255);
+}
+
+.btn-primary {
+  background-color: gray;
+  color: white;
+  outline: none;
+  border: gray;
+}
+
+.btn-primary:hover {
+  background-color: black;
+  color: white;
+}

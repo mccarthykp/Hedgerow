@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+  <form method='POST' action='/investments/{{ investment._id }}'>
+    {% include 'partials/investments_form.html' %}
+    <div class='form-group'>
+      <button class='btn btn-primary' type='submit'>Update Investment</button>
+    </div>
+  </form>
+{% endblock %}

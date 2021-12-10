@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Investments</h1>
+
+    <!-- <a href="/investments/new">New investment</a> -->
+
+    <div class='row'>
+        {% for investment in investments %}
+            <div class='col-md-3'>
+                <h2><a href='/investments/{{ investment._id }}'>{{ investment.title }}</a></h2>
+                <p>{{ investment.description }}</p>
+                <p class="amount">{{ investment.amount }}</p>
+            </div>
+    {% endfor %}
+    </div>
+{% endblock %}
