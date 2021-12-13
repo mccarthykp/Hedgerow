@@ -5,7 +5,8 @@ from dotenv import load_dotenv
 import os
 
 load_dotenv()
-DATABASE_URL=f'pymongo.MongoClient("mongodb+srv://MongoDBHedgerow:{os.environ.get("password")}@hedgerowcluster.gxkzp.mongodb.net/HedgerowCluster?retryWrites=true&w=majority")'
+pw = os.environ.get("password")
+DATABASE_URL=f"mongodb+srv://MongoDBHedgerow:{pw}@hedgerowcluster.gxkzp.mongodb.net/HedgerowCluster?retryWrites=true&w=majority"
 client = MongoClient(DATABASE_URL)
 mongo_db = client.db
 # mongo_db.launches.drop()
