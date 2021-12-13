@@ -70,7 +70,7 @@ def investments_update(investment_id):
   ''' Submit an edited investment '''
   updated_investment = {
     'asset': request.form.get('asset'),
-    'amount': '$' + request.form.get('amount').strip('$')
+    'amount': request.form.get('amount').strip('$')
   }
   investments.update_one(
     {'_id': ObjectId(investment_id)},
