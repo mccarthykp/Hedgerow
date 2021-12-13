@@ -9,9 +9,7 @@ pw = os.environ.get("password")
 DATABASE_URL=f"mongodb+srv://MongoDBHedgerow:{pw}@hedgerowcluster.gxkzp.mongodb.net/HedgerowCluster?retryWrites=true&w=majority"
 client = MongoClient(DATABASE_URL)
 mongo_db = client.db
-# mongo_db.launches.drop()
 
-# db = client.Hedgerow
 investments = mongo_db.investments
 assets = mongo_db.assets
 
