@@ -1,11 +1,18 @@
 from flask import Flask, render_template, request, redirect, url_for
 from bson.objectid import ObjectId
 from pymongo import MongoClient
+from dotenv import load_dotenv
+import os
 
-client = MongoClient()
-db = client.Hedgerow
-investments = db.investments
-assets = db.assets
+load_dotenv()
+DATABASE_URL=f'pymongo.MongoClient("mongodb+srv://MongoDBHedgerow:{os.environ.get("password")}@hedgerowcluster.gxkzp.mongodb.net/HedgerowCluster?retryWrites=true&w=majority")'
+client = MongoClient(DATABASE_URL)
+mongo_db = client.db
+# mongo_db.launches.drop()
+
+# db = client.Hedgerow
+investments = mongo_db.investments
+assets = mongo_db.assets
 
 app = Flask(__name__)
 
