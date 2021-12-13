@@ -45,7 +45,7 @@ def investments_submit():
   ''' Submit a new investment '''
   investment = {
     'asset': request.form.get('asset'),
-    'amount': '$' + request.form.get('amount')
+    'amount': '$' + request.form.get('amount').strip('$')
   }
   investment_id = investments.insert_one(investment).inserted_id
   return redirect(url_for('investments_show', investment_id=investment_id))
@@ -70,7 +70,7 @@ def investments_update(investment_id):
   ''' Submit an edited investment '''
   updated_investment = {
     'asset': request.form.get('asset'),
-    'amount': '$' + request.form.get('amount')
+    'amount': '$' + request.form.get('amount').strip('$')
   }
   investments.update_one(
     {'_id': ObjectId(investment_id)},
