@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Assets</h1>
+
+    <a href="/assets/new">New asset</a>
+
+    <div class='row'>
+        {% for asset in assets %}
+            <div class='col-md-3'>
+                <h2><a href='/assets/{{ asset._id }}'>{{ asset.title }}</a></h2>
+                <p>{{ asset.description }}</p>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

@@ -3,15 +3,14 @@
 {% block content %}
     <h1>Investments</h1>
 
-    <!-- <a href="/investments/new">New investment</a> -->
+    <a href="/investments/new">New investment</a>
 
     <div class='row'>
         {% for investment in investments %}
             <div class='col-md-3'>
-                <h2><a href='/investments/{{ investment._id }}'>{{ investment.title }}</a></h2>
-                <p>{{ investment.description }}</p>
+                <h2><a href='/investments/{{ investment._id }}'>{{ investment.asset }}</a></h2>
                 <p class="amount">{{ investment.amount }}</p>
             </div>
-    {% endfor %}
+        {% endfor %}
     </div>
 {% endblock %}

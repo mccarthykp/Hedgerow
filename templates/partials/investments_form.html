@@ -2,15 +2,14 @@
   <legend>{{ title }}</legend>
   
   <div class='form-group'>
-      <label for='investment-title'>Title</label><br>
-      <input class='form-control' type='text' name='title' value='{{ investment.title }}'/>
+    <label for='investment_asset_title'>Asset</label><br>
+    <select id='investment_asset_title' class='form-control' type='text' name='asset' value='{{ investment.asset }}'>
+      {% for asset in assets %}
+        <option value='{{ asset.title }}'>{{ asset.title }}</option>
+      {% endfor %}
+    </select>
   </div>
   
-  <div class='form-group'>
-    <label for='description'>Description</label><br>
-    <input class='form-control' type='text' name='description' value='{{ investment.description }}' />
-  </div>
-
   <div class='form-group'>
     <label for='amount'>Amount</label><br>
     <input class='form-control' value="{{ investment.amount }}" type='text' name='amount'/>

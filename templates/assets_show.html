@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<a href='/assets'>Back to assets</a>
+<div class='row'>
+  <div class='col-sm-6 col-sm-offset-3'>
+    <h2>{{ asset.title }}</h2>
+    <p>{{ asset.description }}</p>
+    <p>{{ asset.reason }}</p>
+    <p>
+      <a href='/assets/{{ asset._id }}/edit'>Edit</a>
+    </p>
+    <p>
+      <form method='POST' action='/assets/{{ asset._id }}/delete'>
+        <button type='submit'>Delete</button>
+      </form>
+    </p>
+  </div>
+</div>
+{% endblock %}

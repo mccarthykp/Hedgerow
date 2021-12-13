@@ -12,6 +12,11 @@ h1 {
   padding-top: 5rem;
 }
 
+.h1-sub-text {
+  font-size: 2rem;
+  color: rgb(85, 85, 85);
+}
+
 a {
   color: rgb(65, 65, 65);
 }

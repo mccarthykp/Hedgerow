@@ -1,11 +1,10 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<a href='/'>Back to investments</a>
+<a href='/investments'>Back to investments</a>
 <div class='row'>
   <div class='col-sm-6 col-sm-offset-3'>
-    <h2>{{ investment.title }}</h2>
-    <p>{{ investment.description }}</p>
+    <h2>{{ investment.asset }}</h2>
     <p>{{ investment.amount }}</p>
     <p>
       <a href='/investments/{{ investment._id }}/edit'>Edit</a>
